@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicologia Viva | Dr. Gilson Afonso "Psicólogo Clínico"</title>
+    <link rel="shortcut icon" href="img/logo_capa.png" type="image/x-icon">
+    <!-- SEO -->
+    <!--hero-photo-card-->
+    <meta name="description"
+        content="Consultório de psicologia moderno e acolhedor. Marque a sua consulta online com o Dr. Gilson Afonso e cuide da sua saúde mental com apoio profissional.">
+    <meta name="keywords"
+        content="psicologia, psicólogo, terapia, saúde mental, ansiedade, depressão, consulta online, bem-estar">
+
+    <!-- Open Graph (para partilha em redes sociais) -->
+    <meta property="og:title" content="Mente Serena | Psicologia e Bem-Estar Emocional">
+    <meta property="og:description"
+        content="Marque consultas online com o Dr. Gilson Afonso. Um espaço seguro para cuidar da sua mente e emoções.">
+    <meta property="og:image" content="img/logo_gilson.png">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mente Serena | Psicologia e Bem-Estar Emocional">
+    <meta name="twitter:description" content="Cuidar da mente é transformar vidas. Marque já a sua consulta online.">
+    <meta name="twitter:image" content="img/logo_gilson.png">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">GA</div>
+                <div class="logo-text">Dr. Gilson Afonso<span>Psicólogo Clínico</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#metodos">Métodos</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+                <li><a href="#consulta" class="nav-cta">Marcar Consulta</a></li>
+            </ul>
+            <div style="display:flex;gap:10px;align-items:center">
+                <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Alternar modo">🌙</button>
+                <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#sobre" onclick="closeMenu()">Sobre o Psicólogo</a>
+        <a href="#servicos" onclick="closeMenu()">Serviços</a>
+        <a href="#metodos" onclick="closeMenu()">Métodos</a>
+        <a href="#depoimentos" onclick="closeMenu()">Depoimentos</a>
+        <a href="#blog" onclick="closeMenu()">Blog</a>
+        <a href="#contactos" onclick="closeMenu()">Contactos</a>
+        <a href="#consulta" onclick="closeMenu()" style="color:var(--blue);font-weight:500">Marcar Consulta →</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-orb1"></div>
+        <div class="hero-orb2"></div>
+        <div class="hero-orb3"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="hero-badge-dot"></div>
+                    <span>Psicólogo Licenciado · CRP 12345</span>
+                </div>
+                <h1 class="hero-title">
+                    A sua saúde mental<br><em>importa.</em><br>
+                    <strong>Vamos cuidar juntos.</strong>
+                </h1>
+                <p class="hero-sub">Especialista em psicoterapia, desenvolvimento pessoal e gestão emocional. Um espaço
+                    seguro para crescer, superar e florescer.</p>
+                <div class="hero-btns">
+                    <a href="#consulta" class="btn-primary">
+                        <span>📅</span> Marcar Consulta
+                    </a>
+                    <a href="#sobre" class="btn-secondary">
+                        Conhecer o Dr. Gilson →
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-num" data-count="500">0</span>
+                        <div class="hero-stat-label">Pacientes atendidos</div>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num" data-count="8">0</span>
+                        <div class="hero-stat-label">Anos de experiência</div>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-num" data-count="98">0</span>
+                        <div class="hero-stat-label">% Satisfação</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-card">
+                    <div class="hero-photo">
+                        <!-- Illustrated professional person SVG -->
+                        <img src="img/pessoa.png" alt="Doctor" width="70%" />
+                    </div>
+                    <div class="hero-photo-badge">
+                        <div class="badge-title">Especialidade</div>
+                        <div class="badge-val">TCC · Ansiedade</div>
+                    </div>
+                    <div class="hero-photo-badge2">
+                        <div class="badge2-val">🏆 Top Psicólogo</div>
+                        <div class="badge2-label">2023 · 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-bg" id="stats">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-num" data-count="500">0+</span>
+                <div class="stat-label">Pacientes Atendidos</div>
+            </div>
+            <div class="stat-item reveal" style="transition-delay:.1s">
+                <span class="stat-num" data-count="8">0</span>
+                <div class="stat-label">Anos de Experiência</div>
+            </div>
+            <div class="stat-item reveal" style="transition-delay:.2s">
+                <span class="stat-num" data-count="1200">0</span>
+                <div class="stat-label">Sessões Realizadas</div>
+            </div>
+            <div class="stat-item reveal" style="transition-delay:.3s">
+                <span class="stat-num" data-count="98">0</span>
+                <div class="stat-label">% Índice de Satisfação</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOBRE -->
+    <section id="sobre">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-photo reveal-left">
+                    <div class="about-decor"></div>
+                    <div class="about-photo-inner" style="height:500px">
+                        <img src="img/pessoa.png" alt="Doctor" width="80%" object-fit: contain; />
+                    </div>
+                    <div class="about-decor2"></div>
+                    <div class="about-exp-card">
+                        <div class="about-exp-num">8+</div>
+                        <div class="about-exp-txt">Anos dedicados à<br>saúde mental</div>
+                    </div>
+                </div>
+                <div class="about-content reveal-right">
+                    <div class="section-tag">Sobre o Psicólogo</div>
+                    <h2 class="section-title">Dr. Gilson <em>Afonso</em></h2>
+                    <p>Psicólogo Clínico com mais de 8 anos de experiência no acompanhamento de indivíduos que buscam
+                        equilíbrio emocional, saúde mental e qualidade de vida. Formado pela Universidade de Cabo Verde,
+                        com especialização em Terapia Cognitivo-Comportamental e Psicologia do Desenvolvimento.</p>
+                    <p>A minha missão é criar um espaço de escuta genuína, acolhimento e crescimento pessoal, onde cada
+                        paciente se sinta seguro para explorar as suas emoções e construir uma vida mais plena e
+                        significativa.</p>
+                    <p>Ao longo da minha carreira, tive o privilégio de acompanhar centenas de pessoas através dos mais
+                        diversos desafios: ansiedade, depressão, relacionamentos, transições de vida e autoconhecimento.
+                    </p>
+                    <div class="about-pills">
+                        <span class="pill">🎓 Licenciatura em Psicologia</span>
+                        <span class="pill">🧠 Especialização em TCC</span>
+                        <span class="pill">📚 Pós-Graduação Clínica</span>
+                        <span class="pill">🏆 Membro OPP</span>
+                        <span class="pill">🌍 Formação Internacional</span>
+                    </div>
+                    <div class="mvv-grid">
+                        <div class="mvv-card">
+                            <div class="mvv-icon">🎯</div>
+                            <div class="mvv-title">Missão</div>
+                            <div class="mvv-text">Promover saúde mental com empatia, ciência e respeito à
+                                individualidade</div>
+                        </div>
+                        <div class="mvv-card">
+                            <div class="mvv-icon">🔭</div>
+                            <div class="mvv-title">Visão</div>
+                            <div class="mvv-text">Ser referência em psicologia clínica, acessível a toda a comunidade
+                            </div>
+                        </div>
+                        <div class="mvv-card">
+                            <div class="mvv-icon">💡</div>
+                            <div class="mvv-title">Valores</div>
+                            <div class="mvv-text">Ética, confidencialidade, respeito, empatia e crescimento contínuo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="servicos" class="services-bg">
+        <div class="section-inner">
+            <div style="text-align:center" class="reveal">
+                <div class="section-tag">O que ofereço</div>
+                <h2 class="section-title">Serviços <em>Psicológicos</em></h2>
+                <p class="section-sub" style="margin:0 auto">Abordagem personalizada para cada pessoa, com técnicas
+                    modernas e cientificamente validadas para o seu bem-estar.</p>
+            </div>
+            <div class="services-grid stagger">
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>🧘</span></div>
+                    <div class="service-name">Psicoterapia Individual</div>
+                    <div class="service-desc">Acompanhamento personalizado para explorar emoções, superar bloqueios e
+                        construir uma vida mais equilibrada.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>🌱</span></div>
+                    <div class="service-name">Atendimento para Adolescentes</div>
+                    <div class="service-desc">Suporte especializado para jovens em fases de transição, desenvolvimento
+                        de identidade e desafios escolares.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>👤</span></div>
+                    <div class="service-name">Atendimento para Adultos</div>
+                    <div class="service-desc">Espaço seguro para adultos trabalharem questões profissionais, relacionais
+                        e existenciais com profundidade.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>💙</span></div>
+                    <div class="service-name">Orientação Emocional</div>
+                    <div class="service-desc">Ferramentas práticas para identificar, compreender e regular as emoções no
+                        dia a dia de forma saudável.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>⚡</span></div>
+                    <div class="service-name">Desenvolvimento Pessoal</div>
+                    <div class="service-desc">Trabalho focado no autoconhecimento, definição de objetivos e
+                        potencialização das suas capacidades únicas.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>🌊</span></div>
+                    <div class="service-name">Gestão da Ansiedade</div>
+                    <div class="service-desc">Estratégias comprovadas para reduzir a ansiedade, controlar pensamentos
+                        intrusivos e recuperar a calma interior.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>🌿</span></div>
+                    <div class="service-name">Tratamento do Estresse</div>
+                    <div class="service-desc">Técnicas de relaxamento e reestruturação cognitiva para gerir o stress
+                        profissional e pessoal de forma eficaz.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>❤️</span></div>
+                    <div class="service-name">Apoio em Relacionamentos</div>
+                    <div class="service-desc">Orientação para melhorar a comunicação, resolver conflitos e construir
+                        relacionamentos mais saudáveis e afetivos.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><span>✨</span></div>
+                    <div class="service-name">Outros Serviços Psicológicos</div>
+                    <div class="service-desc">Avaliações psicológicas, orientação vocacional, suporte a luto e outras
+                        necessidades específicas de saúde mental.</div>
+                    <div class="service-arrow">↗</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHODS -->
+    <section id="metodos">
+        <div class="section-inner">
+            <div style="text-align:center" class="reveal">
+                <div class="section-tag">Como trabalho</div>
+                <h2 class="section-title">Métodos <em>Utilizados</em></h2>
+                <p class="section-sub" style="margin:0 auto">Técnicas modernas, cientificamente validadas e adaptadas às
+                    necessidades únicas de cada pessoa.</p>
+            </div>
+            <div class="methods-grid">
+                <div class="method-list">
+                    <div class="method-item reveal">
+                        <div class="method-num">01</div>
+                        <div>
+                            <div class="method-info-title">Terapia Cognitivo-Comportamental (TCC)</div>
+                            <div class="method-info-text">Abordagem estruturada e baseada em evidências que identifica e
+                                transforma padrões de pensamento e comportamento negativos que afetam o bem-estar.</div>
+                        </div>
+                    </div>
+                    <div class="method-item reveal" style="transition-delay:.1s">
+                        <div class="method-num">02</div>
+                        <div>
+                            <div class="method-info-title">Escuta Ativa e Empática</div>
+                            <div class="method-info-text">Técnica de comunicação terapêutica que cria um ambiente de
+                                confiança onde o paciente se sente genuinamente compreendido e valorizado.</div>
+                        </div>
+                    </div>
+                    <div class="method-item reveal" style="transition-delay:.15s">
+                        <div class="method-num">03</div>
+                        <div>
+                            <div class="method-info-title">Técnicas de Autoconhecimento</div>
+                            <div class="method-info-text">Exercícios práticos de reflexão, diário terapêutico e
+                                mindfulness para promover a consciência de si mesmo e dos próprios padrões emocionais.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="method-item reveal" style="transition-delay:.2s">
+                        <div class="method-num">04</div>
+                        <div>
+                            <div class="method-info-title">Controlo da Ansiedade</div>
+                            <div class="method-info-text">Estratégias de respiração diafragmática, relaxamento muscular
+                                progressivo e técnicas de aterramento para regular o sistema nervoso.</div>
+                        </div>
+                    </div>
+                    <div class="method-item reveal" style="transition-delay:.25s">
+                        <div class="method-num">05</div>
+                        <div>
+                            <div class="method-info-title">Inteligência Emocional</div>
+                            <div class="method-info-text">Desenvolvimento da capacidade de identificar, compreender e
+                                gerir as próprias emoções e as dos outros com maior eficácia e empatia.</div>
+                        </div>
+                    </div>
+                    <div class="method-item reveal" style="transition-delay:.3s">
+                        <div class="method-num">06</div>
+                        <div>
+                            <div class="method-info-title">Métodos Modernos e Validados</div>
+                            <div class="method-info-text">Atualização constante com as mais recentes pesquisas em
+                                neurociência e psicologia positiva para oferecer o melhor tratamento disponível.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="methods-visual reveal-right">
+                    <div class="methods-circle">
+                        <div class="methods-circle-inner">
+                            <div class="methods-circle-num">6</div>
+                            <div class="methods-circle-txt">Métodos<br>Terapêuticos</div>
+                        </div>
+                        <div class="orbit-dot" style="top:10px;left:50%;transform:translateX(-50%)"></div>
+                        <div class="orbit-dot"
+                            style="bottom:10px;left:50%;transform:translateX(-50%);background:var(--mint)"></div>
+                        <div class="orbit-dot" style="left:10px;top:50%;transform:translateY(-50%);background:#8FD9A8">
+                        </div>
+                        <div class="orbit-dot" style="right:10px;top:50%;transform:translateY(-50%)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="consulta" class="booking-bg">
+        <div class="section-inner">
+            <div class="reveal" style="text-align:center">
+                <div class="section-tag">Agendar Agora</div>
+                <h2 class="section-title">Marcar <em>Consulta</em></h2>
+                <p class="section-sub" style="margin:0 auto">Dê o primeiro passo. Preencha o formulário e entraremos em
+                    contacto para confirmar o seu agendamento.</p>
+            </div>
+            <div class="booking-grid">
+                <div class="booking-info reveal-left">
+                    <h3>Por que escolher o Dr. Gilson Afonso?</h3>
+                    <p>Um atendimento humanizado, confidencial e baseado nas mais modernas técnicas da psicologia
+                        clínica. O seu bem-estar é a nossa prioridade.</p>
+                    <div class="booking-features">
+                        <div class="booking-feature">
+                            <div class="booking-feature-icon">🔒</div> Consultas 100% confidenciais
+                        </div>
+                        <div class="booking-feature">
+                            <div class="booking-feature-icon">💻</div> Atendimento presencial e online
+                        </div>
+                        <div class="booking-feature">
+                            <div class="booking-feature-icon">⚡</div> Resposta em até 24 horas
+                        </div>
+                        <div class="booking-feature">
+                            <div class="booking-feature-icon">🎯</div> Abordagem personalizada
+                        </div>
+                        <div class="booking-feature">
+                            <div class="booking-feature-icon">📅</div> Horários flexíveis
+                        </div>
+                        <div class="booking-feature">
+                            <div class="booking-feature-icon">❤️</div> Ambiente acolhedor e seguro
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-form reveal-right">
+                    <div id="bookingForm">
+                        <div class="form-grid">
+                            <div class="form-group full">
+                                <label>Nome Completo *</label>
+                                <input type="text" id="f-nome" placeholder="Insira o seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Morada</label>
+                                <input type="text" id="f-morada" placeholder="Rua, Cidade">
+                            </div>
+                            <div class="form-group">
+                                <label>Idade *</label>
+                                <input type="number" id="f-idade" placeholder="Ex: 28" min="5" max="120">
+                            </div>
+                            <div class="form-group">
+                                <label>Número de Telefone *</label>
+                                <input type="tel" id="f-tel" placeholder="+238 XXX XXXX">
+                            </div>
+                            <div class="form-group">
+                                <label>Endereço de E-mail *</label>
+                                <input type="email" id="f-email" placeholder="email@exemplo.com">
+                            </div>
+                            <div class="form-group full">
+                                <label>Motivo da Consulta</label>
+                                <select id="f-motivo">
+                                    <option value="">Selecione o motivo</option>
+                                    <option>Ansiedade e Stress</option>
+                                    <option>Depressão</option>
+                                    <option>Relacionamentos</option>
+                                    <option>Autoconhecimento</option>
+                                    <option>Desenvolvimento Pessoal</option>
+                                    <option>Problemas no Trabalho</option>
+                                    <option>Luto e Perdas</option>
+                                    <option>Adolescência e Família</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Data Desejada *</label>
+                                <input type="date" id="f-data">
+                            </div>
+                            <div class="form-group">
+                                <label>Horário Desejado *</label>
+                                <select id="f-hora">
+                                    <option value="">Escolha um horário</option>
+                                    <option>08:00 - 09:00</option>
+                                    <option>09:00 - 10:00</option>
+                                    <option>10:00 - 11:00</option>
+                                    <option>11:00 - 12:00</option>
+                                    <option>14:00 - 15:00</option>
+                                    <option>15:00 - 16:00</option>
+                                    <option>16:00 - 17:00</option>
+                                    <option>17:00 - 18:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group full">
+                                <label>Informações Adicionais</label>
+                                <textarea id="f-obs"
+                                    placeholder="Partilhe mais detalhes sobre o que gostaria de trabalhar..."></textarea>
+                            </div>
+                        </div>
+                        <button class="form-submit" onclick="submitForm()">📅 Confirmar Agendamento</button>
+                    </div>
+                    <div class="success-msg" id="successMsg">
+                        <div class="check">🎉</div>
+                        <p><strong>Pedido recebido com sucesso!</strong><br>Entraremos em contacto em até 24 horas para
+                            confirmar o seu agendamento. Obrigado pela sua confiança!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="depoimentos" class="testimonials-bg">
+        <div class="section-inner">
+            <div style="text-align:center" class="reveal">
+                <div class="section-tag">Depoimentos</div>
+                <h2 class="section-title">O que dizem os <em>Pacientes</em></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">O Dr. Gilson mudou a minha vida. Cheguei com ansiedade severa e hoje
+                        consigo gerir as minhas emoções de forma que nunca pensei ser possível. Um profissional
+                        extraordinário.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div>
+                            <div class="author-name">Ana Maria</div>
+                            <div class="author-role">Paciente há 2 anos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:.1s">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">Consultas que transformam. O ambiente de acolhimento e a escuta
+                        empática do Dr. Gilson criaram um espaço onde me sinto seguro para ser autêntico e crescer.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#8FD9A8,#5B8DEF)">JC</div>
+                        <div>
+                            <div class="author-name">João Carlos</div>
+                            <div class="author-role">Paciente há 1 ano</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:.2s">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">A minha filha adolescente passou por um período muito difícil. Com o
+                        apoio do Dr. Gilson, ela floresceu. Recomendo de coração a todos os pais.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">MS</div>
+                        <div>
+                            <div class="author-name">Maria Santos</div>
+                            <div class="author-role">Mãe de paciente</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:.25s">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">Profissionalismo ímpar aliado a uma humanidade rara. O Dr. Gilson tem
+                        um dom para fazer a pessoa sentir-se acolhida desde o primeiro minuto.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#a855f7,#3b82f6)">RP</div>
+                        <div>
+                            <div class="author-name">Ricardo Pires</div>
+                            <div class="author-role">Paciente há 6 meses</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:.3s">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">Aprendi a entender-me, a respeitar os meus limites e a construir
+                        relações mais saudáveis. O trabalho de autoconhecimento foi transformador.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4)">CF</div>
+                        <div>
+                            <div class="author-name">Carla Fernandes</div>
+                            <div class="author-role">Paciente há 1.5 anos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:.35s">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-quote">"</div>
+                    <div class="testimonial-text">O acompanhamento online foi igualmente eficaz. Flexibilidade,
+                        pontualidade e uma qualidade de atenção que raramente se encontra. Grato eternamente.</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" style="background:linear-gradient(135deg,#f43f5e,#f59e0b)">TM</div>
+                        <div>
+                            <div class="author-name">Tomás Medina</div>
+                            <div class="author-role">Paciente online</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-bg">
+        <div class="section-inner">
+            <div style="text-align:center" class="reveal">
+                <div class="section-tag">Perguntas Frequentes</div>
+                <h2 class="section-title">Dúvidas <em>Comuns</em></h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item reveal" onclick="toggleFAQ(this)">
+                    <div class="faq-question">Quanto tempo dura cada sessão? <div class="faq-chevron">▾</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Cada sessão tem a duração de 50 a 60 minutos. Dependendo do caso
+                            clínico e do progresso terapêutico, esta duração pode ser ajustada em concordância com o
+                            paciente.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay:.05s" onclick="toggleFAQ(this)">
+                    <div class="faq-question">As consultas são confidenciais? <div class="faq-chevron">▾</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Sim, absolutamente. Todas as informações partilhadas nas sessões
+                            são estritamente confidenciais e protegidas pelo sigilo profissional, conforme o código
+                            deontológico dos psicólogos.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay:.1s" onclick="toggleFAQ(this)">
+                    <div class="faq-question">Fazem atendimento online? <div class="faq-chevron">▾</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Sim! Oferecemos consultas online por videochamada segura, com a
+                            mesma qualidade e eficácia do atendimento presencial. É uma opção excelente para quem não
+                            pode deslocar-se ao consultório.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay:.15s" onclick="toggleFAQ(this)">
+                    <div class="faq-question">Quantas sessões serão necessárias? <div class="faq-chevron">▾</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">O número de sessões varia conforme os objetivos terapêuticos de
+                            cada pessoa. Algumas situações requerem um trabalho breve (8-12 sessões), enquanto outras
+                            beneficiam de um acompanhamento mais prolongado. Discutiremos isto juntos desde o início.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay:.2s" onclick="toggleFAQ(this)">
+                    <div class="faq-question">Como sei que preciso de psicoterapia? <div class="faq-chevron">▾</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Se está a sentir dificuldades emocionais, relacionais ou
+                            comportamentais que afetam a sua qualidade de vida, a psicoterapia pode ajudar. Não é
+                            necessário estar em crise — muitas pessoas buscam terapia para crescimento pessoal e
+                            autoconhecimento.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal" style="transition-delay:.25s" onclick="toggleFAQ(this)">
+                    <div class="faq-question">Como é a primeira consulta? <div class="faq-chevron">▾</div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">A primeira consulta é uma sessão de acolhimento e avaliação, onde
+                            conhecemos a sua história, objetivos e necessidades. É um espaço sem julgamentos para
+                            começar a traçar o seu caminho terapêutico.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog">
+        <div class="section-inner">
+            <div style="text-align:center" class="reveal">
+                <div class="section-tag">Blog & Artigos</div>
+                <h2 class="section-title">Recursos para o seu <em>Bem-Estar</em></h2>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card reveal">
+                    <div class="blog-thumb blog-thumb-1">🧠</div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Ansiedade</span>
+                        <div class="blog-title">5 Técnicas Comprovadas para Controlar a Ansiedade no Dia a Dia</div>
+                        <div class="blog-excerpt">Aprenda estratégias práticas baseadas em evidências que pode aplicar
+                            imediatamente para reduzir os sintomas de ansiedade.</div>
+                        <div class="blog-meta">📅 15 Jan 2025 · 5 min leitura</div>
+                    </div>
+                </div>
+                <div class="blog-card reveal" style="transition-delay:.1s">
+                    <div class="blog-thumb blog-thumb-2">❤️</div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Relacionamentos</span>
+                        <div class="blog-title">Como Construir Relacionamentos Saudáveis e Duradouros</div>
+                        <div class="blog-excerpt">Os pilares de um relacionamento saudável e como a comunicação
+                            consciente transforma a qualidade dos nossos vínculos.</div>
+                        <div class="blog-meta">📅 8 Jan 2025 · 7 min leitura</div>
+                    </div>
+                </div>
+                <div class="blog-card reveal" style="transition-delay:.2s">
+                    <div class="blog-thumb blog-thumb-3">🌟</div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Autoconhecimento</span>
+                        <div class="blog-title">O Poder do Autoconhecimento: Descubra Quem Você Realmente É</div>
+                        <div class="blog-excerpt">Uma jornada interior que transforma a forma como nos relacionamos
+                            connosco mesmos e com o mundo ao nosso redor.</div>
+                        <div class="blog-meta">📅 2 Jan 2025 · 6 min leitura</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="contactos" style="background:var(--bg2)">
+        <div class="section-inner">
+            <div class="reveal" style="text-align:center">
+                <div class="section-tag">Contactos</div>
+                <h2 class="section-title">Fale <em>Connosco</em></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="reveal-left">
+                    <p class="section-sub">Estamos aqui para si. Entre em contacto através de qualquer um dos canais
+                        abaixo ou visite-nos pessoalmente no nosso consultório.</p>
+                    <div class="contact-info-items">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <div class="contact-item-title">Endereço do Consultório</div>
+                                <div class="contact-item-val">Rua da Saúde Mental, 123 — Praia, Cabo Verde</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div>
+                                <div class="contact-item-title">Telefone</div>
+                                <div class="contact-item-val">+238 261 00 00</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">💬</div>
+                            <div>
+                                <div class="contact-item-title">WhatsApp</div>
+                                <div class="contact-item-val">+238 991 00 00</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">✉️</div>
+                            <div>
+                                <div class="contact-item-title">E-mail</div>
+                                <div class="contact-item-val">gilson.afonso@psicologia.cv</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕐</div>
+                            <div>
+                                <div class="contact-item-title">Horário de Atendimento</div>
+                                <div class="contact-item-val">Segunda a Sexta: 8h – 18h | Sábado: 9h – 13h</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links" style="margin-top:1.5rem">
+                        <a href="#" class="social-link" title="Instagram">📷</a>
+                        <a href="#" class="social-link" title="Facebook">👥</a>
+                        <a href="#" class="social-link" title="LinkedIn">💼</a>
+                        <a href="#" class="social-link" title="YouTube">▶️</a>
+                        <a href="#" class="social-link" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="map-wrap">
+                        <!-- Decorative map illustration -->
+                        <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg"
+                            style="width:100%;height:100%;position:absolute;inset:0">
+                            <defs>
+                                <linearGradient id="mapbg" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#d6e8fa" />
+                                    <stop offset="100%" stop-color="#c5ecd5" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="500" height="350" fill="url(#mapbg)" />
+                            <!-- Grid lines -->
+                            <line x1="0" y1="70" x2="500" y2="70" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <line x1="0" y1="140" x2="500" y2="140" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <line x1="0" y1="210" x2="500" y2="210" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <line x1="0" y1="280" x2="500" y2="280" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <line x1="100" y1="0" x2="100" y2="350" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <line x1="200" y1="0" x2="200" y2="350" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <line x1="300" y1="0" x2="300" y2="350" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <line x1="400" y1="0" x2="400" y2="350" stroke="rgba(91,141,239,0.15)" stroke-width="1" />
+                            <!-- Roads -->
+                            <rect x="0" y="155" width="500" height="16" rx="8" fill="rgba(255,255,255,0.7)" />
+                            <rect x="228" y="0" width="16" height="350" rx="8" fill="rgba(255,255,255,0.7)" />
+                            <rect x="50" y="220" width="180" height="10" rx="5" fill="rgba(255,255,255,0.5)" />
+                            <rect x="280" y="80" width="120" height="10" rx="5" fill="rgba(255,255,255,0.5)" />
+                            <!-- Pin -->
+                            <circle cx="236" cy="163" r="22" fill="#5B8DEF" opacity="0.2" />
+                            <circle cx="236" cy="163" r="14" fill="#5B8DEF" />
+                            <circle cx="236" cy="163" r="6" fill="#fff" />
+                            <line x1="236" y1="177" x2="236" y2="200" stroke="#5B8DEF" stroke-width="3"
+                                stroke-linecap="round" />
+                            <!-- Label -->
+                            <rect x="120" y="210" width="230" height="48" rx="10" fill="white" opacity="0.95" />
+                            <text x="235" y="231" text-anchor="middle" font-size="12" fill="#5B8DEF" font-weight="500"
+                                font-family="sans-serif">Dr. Gilson Afonso</text>
+                            <text x="235" y="248" text-anchor="middle" font-size="10" fill="#718096"
+                                font-family="sans-serif">Consultório de Psicologia · Praia, CV</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom:0.5rem">
+                        <div class="logo-icon">GA</div>
+                        <div class="logo-text">Dr. Gilson Afonso<span>Psicólogo Clínico</span></div>
+                    </div>
+                    <p>Psicólogo Clínico dedicado a promover saúde mental, bem-estar emocional e qualidade de vida para
+                        cada paciente.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">👥</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Psicoterapia Individual</a></li>
+                        <li><a href="#servicos">Atendimento Adolescentes</a></li>
+                        <li><a href="#servicos">Gestão da Ansiedade</a></li>
+                        <li><a href="#servicos">Desenvolvimento Pessoal</a></li>
+                        <li><a href="#servicos">Apoio em Relacionamentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre o Psicólogo</a></li>
+                        <li><a href="#metodos">Métodos</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">📍 Praia, Cabo Verde</a></li>
+                        <li><a href="#">📞 +238 261 00 00</a></li>
+                        <li><a href="#">💬 +238 991 00 00</a></li>
+                        <li><a href="#">✉️ gilson@psicologia.cv</a></li>
+                        <li><a href="#consulta">📅 Marcar Consulta</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2025 Dr. Gilson Afonso — Psicólogo Clínico. Todos os direitos reservados.
+                </div>
+                <div class="footer-copy">CRP 12345 · Membro OPP · Sigilo Profissional Garantido</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CHAT -->
+    <div class="chat-bubble" onclick="toggleChat()" id="chatBubble" title="Chat online">💬</div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <div class="chat-avatar">👨‍⚕️</div>
+            <div class="chat-info">
+                <div class="chat-name">Dr. Gilson Afonso</div>
+                <div class="chat-status">
+                    <div class="chat-status-dot"></div>Online agora
+                </div>
+            </div>
+            <div style="cursor:pointer;color:#fff;font-size:18px" onclick="toggleChat()">✕</div>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-msg bot">Olá! 👋 Bem-vindo ao consultório do Dr. Gilson Afonso. Como posso ajudá-lo hoje?
+            </div>
+        </div>
+        <div class="chat-input-wrap">
+            <input class="chat-input" id="chatInput" placeholder="Escreva uma mensagem..."
+                onkeydown="if(event.key==='Enter')sendChat()">
+            <button class="chat-send" onclick="sendChat()">➤</button>
+        </div>
+    </div>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/238991000000" class="wa-btn" target="_blank" title="WhatsApp">
+        <div class="wa-tooltip">Fale pelo WhatsApp</div>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- ADMIN PANEL -->
+    <button class="admin-btn" onclick="toggleAdmin()">🔐 Admin</button>
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-inner">
+            <div class="admin-header">
+                <h3>Painel Administrativo — Consultas Agendadas</h3>
+                <button class="admin-close" onclick="toggleAdmin()">✕</button>
+            </div>
+            <div class="admin-body">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>Motivo</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTableBody">
+                        <tr>
+                            <td colspan="7" style="text-align:center;padding:2rem;color:var(--text3)">Nenhuma consulta
+                                agendada ainda.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION -->
+    <div class="notification" id="notification">
+        <div class="notif-icon">✅</div>
+        <div class="notif-text">
+            <strong>Consulta agendada!</strong>
+            Entraremos em contacto em breve para confirmar.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
